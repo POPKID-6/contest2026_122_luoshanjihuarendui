@@ -1,0 +1,28 @@
+# Local credentials and configuration
+.env
+.env.*
+!.env.example
+gateway/config.ini
+gateway/**/config.ini
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Build outputs and generated audio
+build/
+out/
+*.o
+*.a
+*.elf
+*.hex
+*.map
+*.img
+gateway/**/*.wav
+gateway/**/*.pcm
+gateway/**/*.log
+
+# Keep official AI Coding JSONL logs versioned; do not ignore logs/.
