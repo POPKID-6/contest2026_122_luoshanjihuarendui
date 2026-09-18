@@ -1,0 +1,35 @@
+[mqtt]
+; 设备与网关共用的 MQTT broker
+; 演示用公共 broker（无需账号）；量产请换自建 / 阿里云 IoT / 腾讯云并配置账号密码
+host = broker.emqx.io
+port = 1883
+username =
+password =
+; 必须与设备端 defconfig 的 CONFIG_KITCHEN_SMART_DEVICE_ID 一致
+device_id = device001
+
+[push]
+; 微信推送通道：serverchan / pushplus / wecom / dingtalk / none
+channel = none
+; 使用 Server酱时将 channel 改为 serverchan，并填入自己的 SendKey
+serverchan_key =
+; 其他通道（按需填写）
+pushplus_token =
+wecom_webhook =
+dingtalk_webhook =
+
+[ai]
+; 阿里云百炼（DashScope）OpenAI 兼容接口
+llm_base_url = https://dashscope.aliyuncs.com/compatible-mode/v1
+; 留空时使用本地规则回答；启用云端大模型时填入自己的 API Key
+llm_api_key =
+llm_model = qwen-plus
+; 语音识别 / 语音合成（同一个 DashScope Key）
+asr_api_key =
+tts_api_key =
+asr_model = paraformer-realtime-v2
+tts_model = cosyvoice-v2
+tts_voice = longxiaochun_v2
+
+; 配置在进程启动时读取，修改后须重启网关。
+; mock 由 llm_api_key 是否为空决定；ASR/TTS 未配置 Key 时不调用云端语音服务。

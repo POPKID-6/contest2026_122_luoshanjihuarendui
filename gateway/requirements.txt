@@ -1,0 +1,4 @@
+# gateway.py uses the Paho 1.x callback/client API.
+paho-mqtt>=1.6,<2
+# Required for configured DashScope ASR and TTS calls.
+dashscope
