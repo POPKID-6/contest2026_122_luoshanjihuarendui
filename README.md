@@ -124,7 +124,7 @@ python gateway/gateway.py
 
 ## AI 辅助开发与赛事资料
 
-项目使用 Codex 辅助开发。本次提交整理源码、工程目录及 README；AI Coding 日志按赛事要求另行归集至 `logs/`，目录中的官方示例不代表本项目开发记录。
+项目使用 Codex 辅助开发。AI Coding 历史日志已归档至 [logs/POPKID-6/](logs/POPKID-6/)，包含 14 个 JSONL 文件、3574 条事件，并已通过官方格式校验。日志来自真实 Codex Desktop 会话，转换方式、脱敏范围与历史数据局限见 [日志说明](logs/POPKID-6/README.md)。
 
 - [参赛代码提交指南](https://github.com/open-vela/docs/blob/dev-ai-contest-2026/zh-cn/contest_2026/code_submission_guide.md)
 - [AI Coding 日志归集与提交手册](https://github.com/open-vela/docs/blob/dev-ai-contest-2026/zh-cn/contest_2026/ai_coding_log_guide.md)
