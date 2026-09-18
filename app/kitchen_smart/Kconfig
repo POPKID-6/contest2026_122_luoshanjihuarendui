@@ -1,0 +1,38 @@
+config KITCHEN_SMART
+	bool "kitchen smart assistant app (v2)"
+	default n
+	---help---
+		Enable openvela smart kitchen assistant: manual WiFi UI,
+		AI voice/text interaction via MQTT gateway, WeChat alert push.
+
+if KITCHEN_SMART
+
+config KITCHEN_SMART_PROGNAME
+	string "Program name"
+	default "kitchen_smart"
+
+config KITCHEN_SMART_PRIORITY
+	int "task priority"
+	default 100
+
+config KITCHEN_SMART_STACKSIZE
+	int "task stack size"
+	default 32768
+
+config KITCHEN_SMART_MQTT_HOST
+	string "MQTT broker host"
+	default "broker.emqx.io"
+
+config KITCHEN_SMART_MQTT_PORT
+	int "MQTT broker port"
+	default 1883
+
+config KITCHEN_SMART_DEVICE_ID
+	string "device id used in mqtt topics"
+	default "device001"
+
+config KITCHEN_SMART_WIFI_IFNAME
+	string "wifi interface name"
+	default "wlan0"
+
+endif

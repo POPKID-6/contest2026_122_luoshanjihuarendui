@@ -1,0 +1,7 @@
+############################################################################
+# app/kitchen_smart/Make.defs  (v2)
+############################################################################
+
+ifneq ($(CONFIG_KITCHEN_SMART),)
+CONFIGURED_APPS += $(APPDIR)/packages/demos/contest2026_122_kitchen_smart
+endif
